@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>DevClub - Convert Money</title>
+</head>
+
+<body>
+    <div class="topImg">
+        <img src="assets/img/logo.gif" width="200" alt="Git Animado">
+    </div>
+
+    <main>
+        <label>
+            <p><span>Converter</span> de</p>
+            <select data-js="convertFrom">
+                <option value="Real">R$ Real brasileiro</option>
+                <option value="dollar">US$ Dólar americano</option>
+                <option value="Euro">€ Euro</option>
+                <option value="Libra">Libra</option>
+                <option value="Bitcoin">Bitcoin</option>
+            </select>
+        </label>
+
+
+        <label>
+            <p><span>Converter</span> para</p>
+            <select data-js="targetCurrency">
+                <option value="dollar">US$ Dólar americano</option>
+                <option value="Real">R$ Real brasileiro</option>
+                <option value="Euro">€ Euro</option>
+                <option value="Libra">Libra</option>
+                <option value="Bitcoin">Bitcoin</option>
+            </select>
+        </label>
+
+        <label>
+            <p>Valor</p>
+            <input type="number" data-js="input-currency"  placeholder="R$ 10.000,00">
+        </label>
+
+        <button type="button" data-js="btn-convert">Converter</button>
+
+        <section>
+            <div>
+                <img id="toConvertImg" src="assets/img/Real.png" alt="bandeira do país">
+                <p id="coinNameOrigin">Real</p>
+                <p class="value"><span data-js="inputCurrencyDisplay">R$ 0,00</span></p>
+            </div>
+
+            <img class="arrow" src="assets/img/Vector.png" alt="seta">
+
+            <div>
+                <img id="targetCurrencyImage" src="assets/img/dollar.png" alt="bandeira do país">
+                <p id="coinName" >Dolar Americáno</p>
+                <p class="value"><span id="coin"></span> <span data-js="outputCurrencyDisplay">$0.0</span></p>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
